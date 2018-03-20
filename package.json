@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/GHHM/sample-server#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.3"
   },
   "devDependencies": {},
