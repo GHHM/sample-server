@@ -42,6 +42,23 @@ app.get('/user/:userId', function (req, res) {
   
     res.send(user);
   });
+
+  app.get('/user/search', function (req, res) {
+
+    console.log('데이터 확인', req.query.name);
+  
+    // TODO 실제로 DB 데이터를 조회하는 로직을 개발해야 함.
+  
+    var users = [{
+      userId: 13579,
+      name: 'John',
+      email: 'yohany_AT_gmail.com',
+      company: 'KossLAB'
+    }];
+  
+    res.send({result: users});
+  
+  });
   
   app.put('/user/:userId', function (req, res) {
     res.send('PUT (Update) ');
