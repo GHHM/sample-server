@@ -16,4 +16,29 @@ app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
 });
 
-
+app.post('/user', function (req, res) {
+    res.send('POST (Create) ');
+  });
+  
+  app.get('/user/:userId', function (req, res) {
+    
+    console.log(req.params.userId + '의 정보를 가져옵니다');
+  
+    // TODO 실제로 DB 에서 userId 에 해당하는 사용자 정보를 가져오는 로직을 개발해야 함
+    var user = {
+      userId: 13579,
+      name: 'John',
+      email: 'yohany_AT_gmail.com',
+      company: 'KossLAB'
+    };
+  
+    res.send(user);
+  });
+  
+  app.put('/user/:userId', function (req, res) {
+    res.send('PUT (Update) ');
+  });
+  
+  app.delete('/user/:userId', function (req, res) {
+    res.send('DELETE (Delete) ');
+  });
